@@ -5,10 +5,12 @@ app.use('/api/v1/tours', router);
 
 const router = express.Router();
 
+router.param('id', tourService.checkId);
+
 router
   .route('/')
   .getById(tourService.getById)
-  .post(tourService.getById);
+  .post(tourService.checkBody, tourService.create);
 
 router
   .route('/:id')

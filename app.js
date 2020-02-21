@@ -1,13 +1,14 @@
 const express = require('express');
+const morgan = require('morgan');
+import tourRouter from './controllers/tourControllers';
 
 const app = express();
 
+app.use(morgan('dev'));
 app.use(express.json());
+app.use(express.static(`${__dirname}/public`));
 
-const port = 3000;
+app.use('/api/v1/users', userRouter);
+app.use('/api/v1/tours', tourRouter);
 
-app.get('/', (req, res) => {
-  res.status(200).send('Hello from the server side');
-});
-
-app.listen(port, () => {});
+module.exports = app;
