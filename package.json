@@ -5,6 +5,7 @@
   "author": "Kennedy Batista",
   "license": "MIT",
   "dependencies": {
-    "express": "4"
+    "express": "4",
+    "morgan": "^1.9.1"
   }
 }
