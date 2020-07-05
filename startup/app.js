@@ -1,6 +1,6 @@
 const express = require('express');
 const morgan = require('morgan');
-const tourRouter = require('./controllers/tourControllers');
+const tourRouter = require('../src/controllers/tourControllers');
 
 const app = express();
 

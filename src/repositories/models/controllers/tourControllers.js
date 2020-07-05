@@ -1,5 +1,5 @@
-const tourService = require('../src/handlers/tourHandler');
-const router = require('../src/configs/router.js');
+const tourService = require('../handlers/tourHandler');
+const router = require('../../router.js');
 
 router.param('id', tourService.checkId);
 
