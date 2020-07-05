@@ -1,5 +1,5 @@
-import tourHandler from './handlers/tourHandler';
-import router from './../../../router.js';
+import * as tourHandler from '../handlers/tourHandler';
+import router from '../configs/router';
 
 router.param('id', tourHandler.checkId);
 
@@ -14,4 +14,4 @@ router
   .patch(tourHandler.update)
   .delete(tourHandler.deleteById);
 
-module.exports = router;
+export default router;

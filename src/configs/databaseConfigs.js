@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from ('mongoose');
 
 const DbUrl = process.env.DATABASE.replace(
   '<PASSWORD>',
